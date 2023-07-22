@@ -25,10 +25,10 @@ priv-mode:
 general:
   total_instructions: 1000
   regs_not_use: x1,x2
-  custom_trap_handler: false
+  custom_trap_handler: true
   code_start_address: 0x80000000
   default_program_exit: true
-  delegation: 0x0
+  delegation: 0xfff
 
 # ---------------------------------------------------------------------------------
 # Distribution of instructions according to ISA extensions
@@ -40,9 +40,9 @@ isa-instruction-distribution:
   rel_sys: 0
   rel_sys.csr: 0
   rel_rv32i.ctrl: 0
-  rel_rv32i.compute: 10
-  rel_rv32i.data: 10
-  rel_rv32i.fence: 10
+  rel_rv32i.compute: 1
+  rel_rv32i.data: 0
+  rel_rv32i.fence: 0
   rel_rv64i.compute: 0
   rel_rv64i.data: 0
   rel_rv32i.zba: 0
@@ -63,7 +63,7 @@ isa-instruction-distribution:
   rel_rv32i.zbt: 0
   rel_rv64i.zbt: 0
   rel_rv32m: 0
-  rel_rv64m: 0 #error it was 10 but the instructions "remuw" and "mul" are part of the RV64M (64-bit Multiply and Divide) extension, but they are not part of the RV32I (32-bit Base Integer) extension in the RISC-V ISA.
+  rel_rv64m: 0
   rel_rv32a: 0
   rel_rv64a: 0
   rel_rv32f: 0

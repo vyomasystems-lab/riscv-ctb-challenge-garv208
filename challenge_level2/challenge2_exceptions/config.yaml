@@ -63,7 +63,7 @@ isa-instruction-distribution:
   rel_rv32i.zbt: 0
   rel_rv64i.zbt: 0
   rel_rv32m: 0
-  rel_rv64m: 0 #error it was 10 but the instructions "remuw" and "mul" are part of the RV64M (64-bit Multiply and Divide) extension, but they are not part of the RV32I (32-bit Base Integer) extension in the RISC-V ISA.
+  rel_rv64m: 10
   rel_rv32a: 0
   rel_rv64a: 0
   rel_rv32f: 0
